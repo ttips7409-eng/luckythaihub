@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>LuckyThaiHub</title>
+<title>LuckyThaiHub</title>
 </head>
 <body>
-  <h1>LuckyThaiHub</h1>
-  <p>স্বাগতম</p>
+
+<h1>LuckyThaiHub</h1>
+
+<input type="password" id="pass" placeholder="পাসওয়ার্ড লিখুন">
+<button onclick="check()">দেখুন</button>
+
+<div id="result"></div>
+
+<script>
+function check() {
+  var p = document.getElementById("pass").value;
+
+  if (p == "1234") {
+    document.getElementById("result").innerHTML =
+      "<h3>আজকের টিকিট</h3><p>VIP-001</p>";
+  } else {
+    document.getElementById("result").innerHTML =
+      "<p>ভুল পাসওয়ার্ড</p>";
+  }
+}
+</script>
+
 </body>
 </html>
