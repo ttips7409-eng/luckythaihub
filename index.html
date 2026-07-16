@@ -1,28 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LuckyThaiHub</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#111;
+color:#fff;
+text-align:center;
+}
+
+.container{
+padding:30px;
+}
+
+img{
+width:120px;
+margin-top:20px;
+}
+
+input{
+width:90%;
+max-width:300px;
+padding:12px;
+border-radius:8px;
+border:none;
+margin-top:15px;
+font-size:16px;
+}
+
+button{
+padding:12px 25px;
+margin-top:15px;
+background:gold;
+border:none;
+border-radius:8px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+}
+
+#content{
+display:none;
+margin-top:20px;
+}
+
+.card{
+background:#222;
+padding:20px;
+margin:15px;
+border-radius:10px;
+}
+</style>
+
 </head>
 <body>
 
-<h1>LuckyThaiHub</h1><img src="logo.png" alt="LuckyThaiHub Logo" width="120">
+<div class="container">
 
-<input type="password" id="pass" placeholder="পাসওয়ার্ড লিখুন">
-<button onclick="check()">দেখুন</button>
+<img src="logo.png" alt="LuckyThaiHub">
 
-<div id="result"></div>
+<h1>LuckyThaiHub</h1>
+
+<p>Enter Password</p>
+
+<input type="password" id="pass" placeholder="Password">
+
+<br>
+
+<button onclick="login()">Login</button>
+
+<div id="content">
+
+<div class="card">
+<h2>🇹🇭 Thailand Lottery</h2>
+<h3>1 July 2026</h3>
+
+<p>3UP : 123</p>
+<p>2DOWN : 45</p>
+
+</div>
+
+<div class="card">
+<h2>VIP Prediction</h2>
+<p>Coming Soon...</p>
+</div>
+
+</div>
+
+</div>
 
 <script>
-function check() {
-  var p = document.getElementById("pass").value;
+function login(){
 
-  if (p == "1234") {
-    document.getElementById("result").innerHTML =
-      "<h3>আজকের টিকিট</h3><p>VIP-001</p>";
-  } else {
-    document.getElementById("result").innerHTML =
-      "<p>ভুল পাসওয়ার্ড</p>";
-  }
+let p=document.getElementById("pass").value;
+
+if(p==="1234"){
+document.getElementById("content").style.display="block";
+}else{
+alert("Wrong Password");
+}
+
 }
 </script>
 
